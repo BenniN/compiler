@@ -204,12 +204,12 @@ public class CheckProcedureDeclaration extends SmallPearlBaseVisitor<Void> imple
 			ProcedureBodyContext b = ctx.procedureBody();
 			int last = b.statement().size();
 			if (last == 0) {
-				ErrorStack.add("must end with RETURN ("+m_typeOfReturns.toString()+")");
+			//	ErrorStack.add("must end with RETURN ("+m_typeOfReturns.toString()+")");
 			} else {
 				SmallPearlParser.StatementContext lastStmnt = b.statement(last-1); 
 				if (lastStmnt.unlabeled_statement() != null) {
 					if (lastStmnt.unlabeled_statement().returnStatement() == null) {
-						ErrorStack.add("must end with RETURN ("+m_typeOfReturns.toString()+")");
+				//		ErrorStack.add("must end with RETURN ("+m_typeOfReturns.toString()+")");
 
 					}
 				}

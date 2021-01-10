@@ -44,11 +44,11 @@ then
    SystemKnown=1
 fi
 
-grep "PRETTY_NAME=\"Ubuntu 18.04.1 LTS\"" /etc/os-release >/dev/null
+grep "PRETTY_NAME=\"Ubuntu 18.04.5 LTS\"" /etc/os-release >/dev/null
 rc=$?
 if [ $rc -eq 0 ]
 then
-   echo "detected: Ubuntu 18.04.1 LTS "
+   echo "detected: Ubuntu 18.04.5 LTS "
    AptPackageList+=" gcc g++ make"
    AptPackageList+=" openjdk-8-jdk"
    AptPackageList+=" flex libncurses5-dev"

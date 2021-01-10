@@ -1,20 +1,13 @@
 package org.smallpearl.compiler.SemanticAnalysis;
 
 
+import org.smallpearl.compiler.*;
+import org.smallpearl.compiler.Exception.UnknownIdentifierException;
+import org.smallpearl.compiler.SmallPearlParser.ExpressionContext;
+import org.smallpearl.compiler.SymbolTable.*;
+
 import java.util.ArrayList;
 import java.util.List;
-
-import org.antlr.v4.runtime.ParserRuleContext;
-import org.antlr.v4.runtime.tree.ParseTree;
-import org.smallpearl.compiler.*;
-import org.smallpearl.compiler.SmallPearlParser.ExpressionContext;
-import org.smallpearl.compiler.Exception.*;
-import org.smallpearl.compiler.SymbolTable.FormalParameter;
-import org.smallpearl.compiler.SymbolTable.ModuleEntry;
-import org.smallpearl.compiler.SymbolTable.ProcedureEntry;
-import org.smallpearl.compiler.SymbolTable.SymbolTable;
-import org.smallpearl.compiler.SymbolTable.SymbolTableEntry;
-import org.smallpearl.compiler.SymbolTable.VariableEntry;
 
 /**
  * check for array boundaries: lwb <= upb

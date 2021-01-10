@@ -50,6 +50,7 @@ public class CheckSwitchCase extends SmallPearlBaseVisitor<Void> implements Smal
     private ArrayList<FixedRange> m_listOfAlternatives = null;
     private AST m_ast = null;
 
+
     public CheckSwitchCase(String sourceFileName,
                            int verbose,
                            boolean debug,
